@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
 
-import activityReducer from './activity';
+import activityReducer from './Activity';
 
 export default combineReducers({activity: activityReducer});
