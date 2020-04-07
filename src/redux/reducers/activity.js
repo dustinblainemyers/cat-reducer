@@ -6,7 +6,7 @@ const initialState = {
 
 
     activity: "napping",
-    name: "cat"
+  
 }
 
 
@@ -36,15 +36,7 @@ const activityReducer = (state = initialState, action) => {
        
         }
 
-        case ACTION_SET_NAME: {
-            const {name} = action.payload
-            return {
-                ...state,
-                name: name
-            }
-
        
-        }
 
         
         default: 
