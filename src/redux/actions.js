@@ -36,6 +36,6 @@ export const setName = content => ({
   export const setActivity = content => ({
     type: ACTION_SET_ACTIVITY,
     payload: {
-      name: content
+      activity: content
     }
   });

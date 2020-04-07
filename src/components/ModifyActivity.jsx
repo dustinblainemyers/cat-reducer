@@ -6,7 +6,7 @@ class ModifyActivity extends React.Component {
   constructor(props) {
     super(props);
     this.state = { input: "" ,
-                   name: ""
+                   activity: ""
 
                            };
   }
@@ -16,7 +16,7 @@ class ModifyActivity extends React.Component {
   };
 
   handleAddTodo = () => {
-    this.props.setName(this.state.input);
+    this.props.setActivity(this.state.input);
     this.setState({ input: "" });
   };
 
@@ -28,7 +28,7 @@ class ModifyActivity extends React.Component {
           value={this.state.input}
         />
         <button className="add-todo" onClick={this.handleAddTodo}>
-          Add Todo
+          Change Name
         </button>
       </div>
     );
@@ -37,5 +37,5 @@ class ModifyActivity extends React.Component {
 
 export default connect(
   null,
-  { setName }
-)(ModifyName);
+  { setActivity }
+)(ModifyActivity);
