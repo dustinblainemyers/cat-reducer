@@ -24,7 +24,7 @@ class ModifyName extends React.Component {
     return (
       <div>
         <input
-          onChange={e => this.updateInput(e.target.value)}
+          onChange={e => this.updateInput(e.target.value)} placeholder="New Name"
           value={this.state.input}
         />
         <button className="add-todo" onClick={this.handleAddTodo}>

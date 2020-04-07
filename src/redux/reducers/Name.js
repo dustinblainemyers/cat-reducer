@@ -19,7 +19,7 @@ const nameReducer = (state = initialState, action) => {
             const {name} = action.payload
             return {
                 ...state,
-                name: name
+                 name
             }
 
        
