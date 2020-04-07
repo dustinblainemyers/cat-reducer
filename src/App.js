@@ -1,16 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Activity from './components/Activity'
+import Activity from './components/individualCat'
 import ModifyName from './components/ModifyName'
-import ModifyActivity from './components/ModifyActivity'
+import ModifyActivity from './components/catList'
 
 function App() {
   return (
     <div className="App">
       <ModifyName/>
       <ModifyActivity/>
-      <Activity />
+      <catList/>
     </div>
   );
 }

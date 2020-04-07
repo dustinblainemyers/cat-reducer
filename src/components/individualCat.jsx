@@ -4,7 +4,7 @@ import {eat, nap, play } from "../redux/actions";
 
 
 
-const Activity = (  { activity, name , eat, play , nap}) => (
+const individualCat = (  { activity, name , eat, play , nap}) => (
  
   <>
   <h1>Activity Component</h1> 
@@ -32,6 +32,6 @@ const mapStateToProps = state => {
 export default connect(
   mapStateToProps, //mapstatetoprops -what do i want
   {eat, nap, play}  //mapdispatchtoprops - what do i want to do 
-)(Activity);
+)(individualCat);
 
 
