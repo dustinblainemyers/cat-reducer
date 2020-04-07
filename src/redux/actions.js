@@ -3,7 +3,7 @@ import {ACTION_NAP, ACTION_EAT, ACTION_PLAY} from './actionTypes';
 
 export const nap = () => {
     return {
-        type: ACITON_NAP
+        type: ACTION_NAP
 
 
     }
