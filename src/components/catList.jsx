@@ -1,19 +1,28 @@
 import React from "react";
 import { connect } from "react-redux";
 import individualCat from "./individualCat";
+import ModifyName from './ModifyName'
+import ModifyActivity from './catList'
 
 
 
-const catList = ({ todos }) => (
-  <ul className="todo-list">
-    {todos && todos.length
-      ? todos.map((todo, index) => {
-          return <Todo key={`todo-${todo.id}`} todo={todo} />;
-        })
-      : "No todos, yay!"}
-  </ul>
+const catList = () => (
+  // <ul className="todo-list">
+  //   {todos && todos.length
+  //     ? todos.map((todo, index) => {
+  //         return <individualCat key={`todo-${todo.id}`} todo={todo} />;
+  //       })
+  //     : "No todos, yay!"}
+  // </ul>
+
+  <>
+  <ModifyName/>
+  <ModifyActivity/>
+   <individualCat/>
+
+ </>
+
 );
-
 // const mapStateToProps = state => {
 //   const { byIds, allIds } = state.todos || {};
 //   const todos =
@@ -23,19 +32,6 @@ const catList = ({ todos }) => (
 //   return { todos };
 // };
 
-const mapStateToProps = state => {
-  const { visibilityFilter } = state;
-  const todos = getTodosByVisibilityFilter(state, visibilityFilter);
-  return { todos };
-  //   const allTodos = getTodos(state);
-  //   return {
-  //     todos:
-  //       visibilityFilter === VISIBILITY_FILTERS.ALL
-  //         ? allTodos
-  //         : visibilityFilter === VISIBILITY_FILTERS.COMPLETED
-  //           ? allTodos.filter(todo => todo.completed)
-  //           : allTodos.filter(todo => !todo.completed)
-  //   };
-};
+
 // export default TodoList;
-export default connect(mapStateToProps)(TodoList);
+export default catList;
